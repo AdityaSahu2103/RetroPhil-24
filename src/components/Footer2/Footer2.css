@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo-white {
+    color: #fff;
+    background: #fff;
+}
+
+/* Additional custom styles for responsive design */
+@media (max-width: 640px) {
+
+    /* Styles for small screens (sm) */
+    .logo-white {
+        /* Example: Adjust logo size or position for smaller screens */
+        height: 40px;
+    }
+
+    /* Adjust padding and margin for better spacing on small screens */
+    .footer-item {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    .footer-links a {
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+
+    /* Styles for medium screens (md) */
+    .footer-item {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 769px) {
+
+    /* Styles for large screens (lg and up) */
+    .footer-item {
+        padding: 2rem;
+        margin: 1.5rem;
+    }
+
+    .footer-links a {
+        font-size: 1.125rem;
+    }
+}

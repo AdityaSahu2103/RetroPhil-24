@@ -1,0 +1,18 @@
+.sales-container {
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+  }
+  
+  .sales-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  

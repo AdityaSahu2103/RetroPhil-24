@@ -1,0 +1,32 @@
+.hero-discover {
+  font-weight: bolder;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 80vh;
+}
+
+.hero-shop-btn {
+  border: 1.5px solid black;
+  padding: 10px 20px;
+  margin: 10px;
+  background: #e43b2f;
+  color: white;
+}
+
+.hero-more-btn {
+  margin: 10px;
+  background: #efecec;
+  color: rgb(18, 17, 17);
+}
+
+/* Media query for larger screens (desktop) */
+@media (min-width: 768px) {
+  .hero-more-btn {
+    padding: 8px 16px;
+    /* Adjust the padding for desktop mode */
+  }
+}

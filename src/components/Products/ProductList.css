@@ -1,0 +1,90 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Consistent gap */
+  justify-content: flex-start; /* Left-aligned products */
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures the bottom section stays at the bottom */
+  border: 3px solid #ccc;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: #fff;
+  width: calc(25% - 30px); /* Consistent width */
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Added spacing between product cards */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  width: 100%; /* Full width */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Ensures the image covers the area */
+  border-radius: 10px;
+  margin-bottom: 10px; /* Space below the image */
+}
+
+.product-name {
+  font-size: 0.8em; /* Slightly smaller name size */
+  font-weight: bold;
+  color: #ff4d4d; /* Highlighted color */
+  position: relative;
+}
+
+.product-description {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-name:hover .product-description {
+  display: block;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dfdcdc; /* Box behind price and add to cart */
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.product-price {
+  font-size: 1.2em; /* Larger price size */
+  color: #ff4d4d; /* Highlighted color */
+  font-weight: bold; /* Bold price */
+}
+
+.add-to-cart {
+  background-color: #ff4d4d; /* Highlighted color */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.add-to-cart i {
+  margin-right: 5px;
+}
+

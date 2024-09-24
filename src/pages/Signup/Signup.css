@@ -1,0 +1,103 @@
+/* Signup.css */
+
+/* Import retro font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Form container styling */
+/* Signup.css */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.mb-3 {
+  margin-bottom: 15px;
+}
+
+.message {
+  margin-top: 20px;
+  color: red;
+  text-align: center;
+}
+
+
+/* Header styling */
+h3 {
+  font-size: 18px; /* Adjusted font size */
+  color: #d9534f; /* Red text */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form input styling */
+.mb-3 {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 12px; /* Adjusted font size */
+  color: #d9534f; /* Red text */
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #d9534f; /* Red border */
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px; /* Adjusted font size */
+  margin-top: 5px;
+}
+
+.form-control:focus {
+  border-color: #c9302c; /* Darker red border on focus */
+  outline: none;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #d9534f; /* Red background */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 14px; /* Adjusted font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #c9302c; /* Darker red on hover */
+}
+
+/* Link styling */
+a {
+  color: #d9534f; /* Red link */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Additional text styling */
+.forgot-password {
+  text-align: center;
+  margin-top: 20px;
+}

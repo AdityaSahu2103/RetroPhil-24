@@ -1,0 +1,24 @@
+.order-detail {
+    padding: 20px;
+}
+
+.order-detail h1 {
+    color: #d63384;
+    font-weight: bold;
+}
+
+.order-detail table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-detail th, .order-detail td {
+    padding: 12px;
+    border: 1px solid #f8d7da;
+    text-align: left;
+}
+
+.order-detail th {
+    background-color: #f8d7da;
+    color: #6c757d;
+}

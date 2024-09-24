@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Stamp 1",
+    "price": "43",
+    "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "https://cdn11.bigcommerce.com/s-9xwo1raw7u/images/stencil/1280x1280/products/61908/45471/USA-F1__04773.1711079939.jpg?c=1"
+  },
+  {
+    "name": "Stamp 2",
+    "price": "53",
+    "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "https://cdn11.bigcommerce.com/s-9xwo1raw7u/images/stencil/1280x1280/products/61908/45471/USA-F1__04773.1711079939.jpg?c=1"
+  },
+  {
+    "name": "Stamp 3",
+    "price": "53",
+    "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "https://cdn11.bigcommerce.com/s-9xwo1raw7u/images/stencil/1280x1280/products/61908/45471/USA-F1__04773.1711079939.jpg?c=1"
+  },
+  {
+    "name": "Stamp 4",
+    "price": "43",
+    "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "https://cdn11.bigcommerce.com/s-9xwo1raw7u/images/stencil/1280x1280/products/61908/45471/USA-F1__04773.1711079939.jpg?c=1"
+  },
+  {
+    "name": "Stamp 5",
+    "price": "53",
+    "detail":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "https://cdn11.bigcommerce.com/s-9xwo1raw7u/images/stencil/1280x1280/products/61908/45471/USA-F1__04773.1711079939.jpg?c=1"
+  },
+  {
+    "name": "Stamp 6",
+    "price": "53",
+    "detail":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "https://cdn11.bigcommerce.com/s-9xwo1raw7u/images/stencil/1280x1280/products/61908/45471/USA-F1__04773.1711079939.jpg?c=1"
+  }
+]

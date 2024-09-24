@@ -1,0 +1,85 @@
+/* Main container for Latest Arrivals section */
+.latest-arrivals {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  /* Section title */
+  .latest-arrivals h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  /* Flexbox grid for products */
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Individual product card */
+  .product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 260px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Hover effect for product card */
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Product image styling */
+  .product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+  
+  /* Product name */
+  .product-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Product price */
+  .product-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  /* Added on Date */
+  .product-card p:last-child {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .product-card {
+      width: 100%;
+      max-width: 350px;
+    }
+  
+    .product-image {
+      height: 200px;
+    }
+  }
+  

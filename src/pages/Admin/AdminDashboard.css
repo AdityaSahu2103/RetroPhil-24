@@ -1,0 +1,33 @@
+/* src/pages/AdminDashboard/AdminDashboard.css */
+.admin-dashboard {
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .admin-dashboard h1 {
+    font-size: 2em;
+    color: #ff4d4d; /* Red color for headings */
+    margin-bottom: 20px;
+  }
+  
+  .admin-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .admin-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4d4d; /* Red background for links */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .admin-link:hover {
+    background-color: #e60000; /* Darker red on hover */
+  }
+  

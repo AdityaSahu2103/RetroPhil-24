@@ -1,0 +1,24 @@
+.user-detail {
+    padding: 20px;
+}
+
+.user-detail h1 {
+    color: #d63384;
+    font-weight: bold;
+}
+
+.user-detail table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-detail th, .user-detail td {
+    padding: 12px;
+    border: 1px solid #f8d7da;
+    text-align: left;
+}
+
+.user-detail th {
+    background-color: #f8d7da;
+    color: #6c757d;
+}
