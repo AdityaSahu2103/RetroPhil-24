@@ -5,7 +5,7 @@ const Carousel = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const slides = [
     {
-      imgSrc: "slideshow.png",              //change imgs here
+      imgSrc: "/Corousal2.jpg",              //change imgs here
       caption: 'Caption Text',
     },
     {

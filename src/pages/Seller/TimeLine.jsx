@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Timeline.css';
 
 const Timeline = ({ events }) => {
@@ -22,6 +23,19 @@ const Timeline = ({ events }) => {
       )}
     </div>
   );
+};
+
+Timeline.propTypes = {
+  events: PropTypes.arrayOf(
+    PropTypes.shape({
+      timestamp: PropTypes.shape({
+        seconds: PropTypes.number.isRequired, // more specific definition
+      }).isRequired,
+      status: PropTypes.string.isRequired,
+      location: PropTypes.string,
+      description: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 export default Timeline;
