@@ -13,7 +13,7 @@ const Carousel = () => {
       caption: 'Caption Two',
     },
     {
-      imgSrc: "triaalcaro.png",
+      imgSrc: "Corousal3.jpg",
       caption: 'Caption Three',
     },
   ];
@@ -35,7 +35,7 @@ const Carousel = () => {
         >
           <div className="numbertext">{`${index + 1} / ${slides.length}`}</div>
           <img src={slide.imgSrc} alt={slide.caption} style={{ width: '100%' }} />
-          <div className="text">{slide.caption}</div>
+          {/* <div className="text">{slide.caption}</div> */}
         </div>
       ))}
       <div className="dots">

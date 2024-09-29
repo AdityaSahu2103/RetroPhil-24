@@ -6,6 +6,26 @@
     color: #fff;
     background: #fff;
 }
+/* Footer2.css */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+footer {
+    overflow: hidden;
+    /* Prevent content overflow */
+    width: 100%;
+    /* Ensures the footer takes full width */
+}
+
+.grid {
+    max-width: 100%;
+    /* Prevent content from exceeding width */
+}
 
 /* Additional custom styles for responsive design */
 @media (max-width: 640px) {

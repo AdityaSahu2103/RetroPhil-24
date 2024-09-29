@@ -69,7 +69,7 @@ const Team = () => {
     <section className='pt-24'>
       <div className='text-center mb-12'>
         <h1 className='text-4xl font-bold'>Meet Our Team</h1>
-        <p className='text-lg'>Passionate individuals dedicated to stamp collecting</p>
+        <p className='text-lg'>Passionate individuals dedicated to philately</p>
       </div>
 
       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6 mx-12'>
