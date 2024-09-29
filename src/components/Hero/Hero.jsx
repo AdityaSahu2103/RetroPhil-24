@@ -30,7 +30,7 @@ const Hero = () => {
             <button className='border-2 rounded-lg bg-zinc-200 hover:bg-zinc-400 text-black px-4 py-2 md:px-7 md:py-2 font-medium'>Browse</button>
           </div>
 
-          <img src="Hero1.webp" alt='Stamp' className='w-full mt-4 md:mt-6 rounded' />
+          <img src="Olympic.jpg" alt='Stamp' className='w-full mt-4 md:mt-6 rounded' />
         </div>
 
         {/* Card 2 */}
@@ -43,7 +43,7 @@ const Hero = () => {
             <button className='border-2 rounded-lg bg-zinc-200 hover:bg-zinc-400 text-black px-4 py-2 md:px-7 md:py-2 font-medium'>Find</button>
           </div>
 
-          <img src="Hero1.webp" alt='Stamp' className='w-full mt-4 md:mt-6 rounded' />
+          <img src="RamMandir.png" alt='Stamp' className='w-full mt-4 md:mt-6 rounded' />
         </div>
 
         {/* Card 3 */}

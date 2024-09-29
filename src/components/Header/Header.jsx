@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth } from '../../pages/firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { CartContext } from "../../CartContext";
-import {getFirestore, doc, getDoc, updateDoc} from "firebase/firestore";
+import { getFirestore, doc, getDoc, updateDoc } from "firebase/firestore";
 import BecomeSellerForm from "../BecomeSeller/BecomeSellerForm";
 import "./Header.css";
 
@@ -20,9 +20,9 @@ const Header = () => {
   const [prevCartLength, setPrevCartLength] = useState(0);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const dropdownRef = useRef(null);
- 
-  const db=getFirestore();
   
+  const db = getFirestore();
+
   useEffect(() => {
     const checkSellerStatus = async () => {
       if (user) {
@@ -52,7 +52,7 @@ const Header = () => {
     } else if (option === 'settings') {
       navigate('/settings');
     } else if (option === 'check-certificate') {
-      navigate('/check-certificate'); // This will redirect users to the page where they enter the certificate number
+      navigate('/check-certificate');
     }
   };
 
@@ -104,6 +104,7 @@ const Header = () => {
       console.error('Error signing out: ', error);
     });
   };
+
   const handleBecomeSellerClick = () => {
     setShowSellerForm(true);
   };
@@ -111,19 +112,22 @@ const Header = () => {
   const handleSellerFormSubmit = async (formData) => {
     const userRef = doc(db, "Users", user.uid);
     try {
-      // Update the Firestore user document to mark as a seller
       await updateDoc(userRef, {
         isSeller: true,
         businessName: formData.businessName,
         businessAddress: formData.businessAddress,
       });
 
-      setIsSeller(true); // Update seller state
-      setShowSellerForm(false); // Close the seller form modal
+      setIsSeller(true);
+      setShowSellerForm(false);
       alert("You are now a seller!");
     } catch (error) {
       console.error("Error becoming seller: ", error);
     }
+  };
+
+  const closeSellerForm = () => {
+    setShowSellerForm(false);
   };
 
   const dropdownMenus = {
@@ -162,21 +166,19 @@ const Header = () => {
         </div>
 
         <div className="navlinks hidden md:flex gap-4 items-center mx-auto">
-          {/* Dropdown for Stamp Collections */}
           <div
             className="relative text-black cursor-pointer"
             onMouseEnter={() => handleMouseEnter('stampCollections')}
             onMouseLeave={handleMouseLeave}
           >
-            <span className="text-black">Stamp Collections</span> {/* Ensure it's the same color */}
+            <span className="text-black">Stamp Collections</span>
             {activeDropdown === 'stampCollections' && dropdownMenus.stampCollections}
           </div>
 
           <Link to="/latest-arrivals" className="text-black">New Arrivals</Link>
           <Link to="/verified-products" className="text-black">Verified Products</Link>
-          <Link to="https://philately-community.vercel.app/"  target="_main" className="text-black">Community</Link>
-          
-          {/* Search Bar */}
+          <Link to="https://philately-community.vercel.app/" target="_main" className="text-black">Community</Link>
+
           <input
             type="text"
             placeholder="Search..."
@@ -188,20 +190,17 @@ const Header = () => {
         </div>
 
         <div className="hidden md:flex gap-4 items-center">
-          {/* Cart with Item Count */}
           <div className="flex justify-center my-auto relative">
-          <Link to="/cart" className="relative inline-block">
-            <img className="h-10" src="./cart.svg" alt="Cart Icon" />
-            {cart.length > 0 && (
-              <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-2 py-1">
-                {cart.reduce((acc, item) => acc + item.quantity, 0)}
-              </span>
-            )}
-          </Link>
-
+            <Link to="/cart" className="relative inline-block">
+              <img className="h-10" src="./cart.svg" alt="Cart Icon" />
+              {cart.length > 0 && (
+                <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-2 py-1">
+                  {cart.reduce((acc, item) => acc + item.quantity, 0)}
+                </span>
+              )}
+            </Link>
           </div>
 
-          {/* Profile Icon */}
           <div className="flex justify-center my-auto">
             <img
               className='h-10 mx-3 cursor-pointer'
@@ -212,84 +211,64 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Menu Toggle */}
-<div className="md:hidden">
-  <button className="mobile-menu-btn" onClick={toggleMenu}>
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black" className="w-6 h-6">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-    </svg>
-  </button>
-</div>
-
+        <div className="md:hidden">
+          <button className="mobile-menu-btn" onClick={toggleMenu}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
       </div>
 
-      {/* Profile Dropdown */}
       {isProfileDropdownOpen && (
         <div className="profile-dropdown" ref={dropdownRef}>
           <ul className="py-2">
             {user ? (
               <>
                 <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Welcome, {user.firstName || user.email}</li>
-                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() =>handleProfileOptionClick('profile')}>View Profile</li>
-                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={()=>handleProfileOptionClick('settings')}>Settings</li>
-                 {/* Show Seller Dashboard if the user is a seller */}
-                 {/* New PDA Dashboard Option */}
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => handleProfileOptionClick('profile')}>View Profile</li>
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => handleProfileOptionClick('settings')}>Settings</li>
                 <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
                   <Link to="/pdadashboard">PDA Dashboard</Link>
-                </li>
-              {isSeller ? (
-                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
-                  <Link to="/seller-dashboard">Seller Dashboard</Link>
                 </li>
-              ) : (
-                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={handleBecomeSellerClick}>
-                  Become a Seller
-                </li>
-              )}
-                {/* Seller form modal */}
-        {showSellerForm && (
-          <BecomeSellerForm onSubmit={handleSellerFormSubmit} />
-        )}
-          <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => handleProfileOptionClick('check-certificate')}>
-                  Check Verified Certificate
-                </li>
-                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={handleSignOut}>Logout</li>
+                {isSeller ? (
+                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">You are a seller</li>
+                ) : (
+                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={handleBecomeSellerClick}>Become a Seller</li>
+                )}
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={handleSignOut}>Sign Out</li>
               </>
             ) : (
               <>
-                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
-                  <Link to="/login">Login</Link>
-                </li>
-                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
-                  <Link to="/signup">Sign Up</Link>
-                </li>
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => navigate('/login')}>Login</li>
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => navigate('/signup')}>Sign Up</li>
               </>
             )}
           </ul>
         </div>
       )}
 
-      {/* Mobile Navigation */}
-<div className={`mobile-menu ${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
-  <div className="flex flex-col gap-3 mt-3 items-center">
-    <Link to="/categories" className="text-black">Stamp Collections</Link>
-    <Link to="/new-arrivals" className="text-black">New Arrivals</Link>
-    <Link to="/verified-products" className="text-black">Verified Products</Link>
-    <Link to="https://philately-community.vercel.app/" target="_main" className="text-black">Community</Link>
-    <div className="flex justify-center my-auto">
-      <img className='h-10' src='./cart.svg' alt="Cart Icon" />
-      <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-2">
-        {cart.length}
-      </span>
-    </div>
-  </div>
-</div>
-
-
       {showNotification && (
-        <div className="notification">
-          Product added to cart successfully! <Link to="/cart" className="view-cart-link">View Cart</Link>
-        </div>
+        <div className="notification">Items added to cart!</div>
+      )}
+
+      {showSellerForm && (
+        <BecomeSellerForm
+          onSubmit={handleSellerFormSubmit}
+          onClose={closeSellerForm}
+        />
+      )}
+
+      {isMenuOpen && (
+        <nav className="mobile-nav">
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/latest-arrivals">New Arrivals</Link></li>
+            <li><Link to="/verified-products">Verified Products</Link></li>
+            <li><Link to="https://philately-community.vercel.app/" target="_main">Community</Link></li>
+            <li><Link to="/cart">Cart</Link></li>
+          </ul>
+        </nav>
       )}
     </header>
   );
