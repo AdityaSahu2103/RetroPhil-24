@@ -9,6 +9,11 @@
   margin: 10px 0;
   padding-left: 10px;
   position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.timeline-item:hover {
+  background-color: rgba(240, 240, 240, 0.5);
 }
 
 .timeline-item::before {
@@ -48,4 +53,48 @@
 .timeline-description {
   font-size: 0.9em;
   color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .timeline {
+    padding: 5px;
+  }
+
+  .timeline-item {
+    padding-left: 5px;
+  }
+
+  .timeline-date {
+    font-size: 0.8em;
+  }
+
+  .timeline-status {
+    font-size: 1em;
+  }
+}
+
+/* Customize Timeline Color Based on Status */
+.timeline-item.completed {
+  border-color: green;
+}
+
+.timeline-item.pending {
+  border-color: orange;
+}
+
+.timeline-item.failed {
+  border-color: red;
+}
+
+.timeline-status.completed::before {
+  background-color: green; /* Change bullet color */
+}
+
+.timeline-status.pending::before {
+  background-color: orange;
+}
+
+.timeline-status.failed::before {
+  background-color: red;
 }
