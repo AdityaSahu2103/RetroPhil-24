@@ -2,14 +2,15 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
-import { getStorage } from 'firebase/storage'; 
+import { getStorage } from 'firebase/storage';
+
 const firebaseConfig = {
-    apiKey: "AIzaSyDLJoLIlLvs_3TsJ4qnPNxcUCDXQSYXpo0",
-    authDomain: "retrophil-9113a.firebaseapp.com",
-    projectId: "retrophil-9113a",
-    storageBucket: "retrophil-9113a.appspot.com",
-    messagingSenderId: "908409427580",
-    appId: "1:908409427580:web:b3b9b3488fadd35a7ddbf9"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
@@ -20,6 +21,6 @@ const db = getFirestore(app);
 
 // Initialize Auth
 const auth = getAuth(app);
-const storage = getStorage(app);  // Initialize Firebase storage
+const storage = getStorage(app); // Initialize Firebase storage
 
 export { db, auth, storage };
