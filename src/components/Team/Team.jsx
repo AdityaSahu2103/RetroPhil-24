@@ -7,9 +7,9 @@ const teamMembers = [
     position: 'Team Leader',
     image: 'Aditya.jpg',
     socials: {
-      twitter: 'https://twitter.com/johndoe',
-      linkedin: 'https://linkedin.com/in/johndoe',
-      instagram: 'https://instagram.com/johndoe'
+      twitter: 'https://www.linkedin.com/in/aditya-sahu-3310b2295/',
+      linkedin: 'https://www.linkedin.com/in/aditya-sahu-3310b2295/',
+      instagram: 'https://www.instagram.com/adityasahu_2103/'
     }
   },
   {
@@ -17,9 +17,9 @@ const teamMembers = [
     position: 'Backend Developer',
     image: 'Dhananjay.jpg',
     socials: {
-      twitter: 'https://twitter.com/janesmith',
-      linkedin: 'https://linkedin.com/in/janesmith',
-      instagram: 'https://instagram.com/janesmith'
+      twitter: 'https://www.linkedin.com/in/dhananjay-chitale/',
+      linkedin: 'https://www.linkedin.com/in/dhananjay-chitale/',
+      instagram: 'https://www.instagram.com/dhananjay.chitale/'
     }
   },
   {
@@ -27,9 +27,9 @@ const teamMembers = [
     position: 'Backend Developer',
     image: 'Raj.jpg',
     socials: {
-      twitter: 'https://twitter.com/alicejohnson',
-      linkedin: 'https://linkedin.com/in/alicejohnson',
-      instagram: 'https://instagram.com/alicejohnson'
+      twitter: 'https://www.linkedin.com/in/raj-lalitkumar-barshikar-a688b6218/',
+      linkedin: 'https://www.linkedin.com/in/raj-lalitkumar-barshikar-a688b6218/',
+      instagram: 'https://www.instagram.com/calm_soul.1806/'
     }
   },
   {
@@ -37,9 +37,9 @@ const teamMembers = [
     position: 'Frontend Developer',
     image: 'Suraj.jpg',
     socials: {
-      twitter: 'https://twitter.com/bobbrown',
-      linkedin: 'https://linkedin.com/in/bobbrown',
-      instagram: 'https://instagram.com/bobbrown'
+      twitter: 'https://www.linkedin.com/in/surajgunjal/',
+      linkedin: 'https://www.linkedin.com/in/surajgunjal/',
+      instagram: 'https://www.linkedin.com/in/surajgunjal/'
     }
   },
   {
@@ -47,9 +47,9 @@ const teamMembers = [
     position: 'Designer',
     image: 'Chandan.jpg',
     socials: {
-      twitter: 'https://twitter.com/charliedavis',
-      linkedin: 'https://linkedin.com/in/charliedavis',
-      instagram: 'https://instagram.com/charliedavis'
+      twitter: 'https://www.instagram.com/chandanbhirud77/',
+      linkedin: 'https://www.linkedin.com/in/chandan-bhirud-5a370428a/',
+      instagram: 'https://www.instagram.com/chandanbhirud77/'
     }
   },
   {
@@ -57,9 +57,9 @@ const teamMembers = [
     position: 'Frontend Developer',
     image: 'vasundhara.png',
     socials: {
-      twitter: 'https://twitter.com/emilywilson',
-      linkedin: 'https://linkedin.com/in/emilywilson',
-      instagram: 'https://instagram.com/emilywilson'
+      twitter: 'https://www.linkedin.com/in/vasundhara-dixit/',
+      linkedin: 'https://www.linkedin.com/in/vasundhara-dixit/',
+      instagram: 'https://www.instagram.com/vasundhara_2505/'
     }
   }
 ];
