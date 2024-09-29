@@ -60,13 +60,13 @@ const AddSellerProduct = () => {
 
   // Function to handle navigation
   const handleBackToDashboard = () => {
-    navigate('/dashboard'); // Adjust the route to your seller dashboard
+    navigate('/seller-dashboard'); // Adjust the route to your seller dashboard
   };
 
   return (
     <div className="add-product">
-      <h1>Add New Product</h1>
-      <button className="add-product-back-to-dashboard" onClick={handleBackToDashboard}>
+      <div className='text-zinc-50 bg-red-700 px-5 py-2 rounded-md'>Add New Product</div>
+      <button className="add-product-back-to-dashboard mb-3" onClick={handleBackToDashboard}>
         Back to Seller Dashboard
       </button>
       <form onSubmit={handleSubmit}>

@@ -12,6 +12,7 @@ const BecomeSellerForm = ({ onSubmit }) => {
 
   return (
     <div className="modal">
+      <div></div>
       <div className="modal-content">
         <h2>Become a Seller</h2>
         <form onSubmit={handleSubmit}>

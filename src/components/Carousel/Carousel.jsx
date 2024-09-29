@@ -9,11 +9,11 @@ const Carousel = () => {
       caption: 'Caption Text',
     },
     {
-      imgSrc: "slideshow.png",
+      imgSrc: "Corousal3.svg",
       caption: 'Caption Two',
     },
     {
-      imgSrc: "slideshow.png",
+      imgSrc: "triaalcaro.png",
       caption: 'Caption Three',
     },
   ];
