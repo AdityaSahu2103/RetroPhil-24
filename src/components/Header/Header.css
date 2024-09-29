@@ -175,29 +175,29 @@
   text-decoration: underline;
   margin-left: 10px;
 }
-/* Header.css */
 
+/* Horizontal Dropdown */
 .horizontal-dropdown {
   display: flex;
-  flex-direction: row; /* Make dropdown categories appear horizontally */
-  gap: 20px; /* Add spacing between categories */
+  flex-direction: row;
+  gap: 20px;
 }
 
 .dropdown-category {
-  flex: 1; /* Ensure even distribution of space */
+  flex: 1;
 }
 
 .header .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%; /* Adjust this value to align the dropdown correctly */
+  top: 100%;
   left: 0;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
   z-index: 1000;
-  width: auto; /* Ensure it fits content */
-  flex-direction: row; /* Make dropdown items appear horizontally */
+  width: auto;
+  flex-direction: row;
 }
 
 .header .relative:hover > .dropdown-content {
@@ -205,7 +205,7 @@
 }
 
 .header .dropdown-category {
-  margin-right: 20px; /* Add spacing between categories */
+  margin-right: 20px;
 }
 
 .header .dropdown-category h3 {
@@ -223,7 +223,7 @@
   text-decoration: underline;
 }
 
-
+/* Modal */
 .modal {
   position: fixed;
   z-index: 1000;

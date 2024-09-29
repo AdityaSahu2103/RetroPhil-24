@@ -212,13 +212,14 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden">
-          <button className="mobile-menu-btn" onClick={toggleMenu}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
-        </div>
+<div className="md:hidden">
+  <button className="mobile-menu-btn" onClick={toggleMenu}>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black" className="w-6 h-6">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+    </svg>
+  </button>
+</div>
+
       </div>
 
       {/* Profile Dropdown */}
@@ -268,20 +269,21 @@ const Header = () => {
       )}
 
       {/* Mobile Navigation */}
-      <div className={`mobile-menu ${isMenuOpen ? 'block' : 'hidden'}`}>
-        <div className="flex flex-col gap-3 mt-3 items-center">
-          <Link to="/categories" className="text-black">Stamp Collections</Link>
-          <Link to="/new-arrivals" className="text-black">New Arrivals</Link>
-          <Link to="/verified-products" className="text-black">Verified Products</Link>
-          <Link to="https://philately-community.vercel.app/" target="_main" className="text-black">Community</Link>
-          <div className="flex justify-center my-auto">
-            <img className='h-10' src='./cart.svg' alt="Cart Icon" />
-            <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-2">
-              {cart.length}
-            </span>
-          </div>
-        </div>
-      </div>
+<div className={`mobile-menu ${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
+  <div className="flex flex-col gap-3 mt-3 items-center">
+    <Link to="/categories" className="text-black">Stamp Collections</Link>
+    <Link to="/new-arrivals" className="text-black">New Arrivals</Link>
+    <Link to="/verified-products" className="text-black">Verified Products</Link>
+    <Link to="https://philately-community.vercel.app/" target="_main" className="text-black">Community</Link>
+    <div className="flex justify-center my-auto">
+      <img className='h-10' src='./cart.svg' alt="Cart Icon" />
+      <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-2">
+        {cart.length}
+      </span>
+    </div>
+  </div>
+</div>
+
 
       {showNotification && (
         <div className="notification">
