@@ -1,0 +1,58 @@
+/* PDAdashboard.css */
+.pda-dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .pda-profile-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .pda-profile-header {
+    text-align: center;
+  }
+  
+  .pda-profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .pda-profile-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .pda-profile-email {
+    color: gray;
+    margin-bottom: 20px;
+  }
+  
+  .pda-profile-details {
+    margin-top: 20px;
+  }
+  
+  .pda-account-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .pda-account-info p {
+    font-size: 16px;
+  }
+  
+  .pda-additional-info {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  

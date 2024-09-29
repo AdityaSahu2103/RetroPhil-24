@@ -72,14 +72,11 @@ const ProductPage = () => {
             </div>
 
             {/* Wishlist and Delivery Information */}
-            <div className="flex space-x-4 items-center text-gray-500 text-sm">
-              <button className="hover:text-gray-700">Add to Wishlist</button>
-              <span>|</span>
-              <button className="hover:text-gray-700">Delivery</button>
-              <span>|</span>
-              <button className="hover:text-gray-700">Returns</button>
-              <span>|</span>
-              <button className="hover:text-gray-700">Payment</button>
+            <div className="flex items-center text-gray-500">
+              <button className="text-xs px-3 mx-2 hover:text-gray-700">Add to Wishlist</button>
+              <button className="text-xs px-3 mx-2 hover:text-gray-700">Delivery</button>
+              <button className="text-xs px-3 mx-2 hover:text-gray-700">Returns</button>
+              <button className="text-xs px-3 mx-2 hover:text-gray-700">Payment</button>
             </div>
           </div>
         </div>

@@ -40,6 +40,9 @@ const AddProduct = () => {
     "100 Year Old Stamps",
     "Agriculture Theme",
     "Aircrafts & Aviation",
+    "Stationary",
+    "SpecialCovers",
+    "CancellationReleases"
     // Add more categories as needed
   ];
 

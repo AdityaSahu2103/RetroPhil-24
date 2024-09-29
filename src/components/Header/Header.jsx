@@ -131,10 +131,10 @@ const Header = () => {
       <div className="dropdown-content horizontal-dropdown">
         <div className="dropdown-category">
           <h3>Stamp Types</h3>
-          <Link to="/categories/fdc">First Day Covers</Link>
           <Link to="/categories/definitive">Definitive</Link>
           <Link to="/categories/commemorative">Commemorative</Link>
           <Link to="/categories/thematic">Thematic</Link>
+          <Link to="/categories/fdc">First Day Covers</Link>
           <Link to="/categories/explore-more">Explore More</Link>
         </div>
         <div className="dropdown-category">
@@ -144,9 +144,9 @@ const Header = () => {
           <Link to="/categories/magnifiers">Magnifiers</Link>
         </div>
         <div className="dropdown-category">
-          <h3>Cancellation Releases</h3>
-          <Link to="/categories/special-covers">Special Covers</Link>
-          <Link to="/categories/place-cancellations">Place Cancellations</Link>
+          <h3>More Releases</h3>
+          <Link to="/categories/SpecialCovers">Special Covers</Link>
+          <Link to="/categories/CancellationReleases">Cancellation Releases</Link>
         </div>
       </div>
     ),
@@ -173,7 +173,7 @@ const Header = () => {
           </div>
 
           <Link to="/latest-arrivals" className="text-black">New Arrivals</Link>
-          <Link to="/best-sellers" className="text-black">Best Sellers</Link>
+          <Link to="/verified-products" className="text-black">Verified Products</Link>
           <Link to="/more-options" className="text-black">More Options</Link>
           
           {/* Search Bar */}
@@ -231,6 +231,10 @@ const Header = () => {
                 <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() =>handleProfileOptionClick('profile')}>View Profile</li>
                 <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={()=>handleProfileOptionClick('settings')}>Settings</li>
                  {/* Show Seller Dashboard if the user is a seller */}
+                 {/* New PDA Dashboard Option */}
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                  <Link to="/pdadashboard">PDA Dashboard</Link>
+                </li>
               {isSeller ? (
                 <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
                   <Link to="/seller-dashboard">Seller Dashboard</Link>

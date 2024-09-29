@@ -1,0 +1,89 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Container for the form */
+  .container {
+    width: 80%; /* Increase width to cover more area */
+    max-width: 1200px; /* Adjusted maximum width */
+    margin: 30px auto; /* Centers the form */
+    padding: 40px; /* Increased padding for a better feel */
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    border-radius: 12px; /* Softer border radius */
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px; /* Make label text slightly smaller */
+  }
+  
+  form input, form select {
+    padding: 15px; /* Increased input padding */
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Lighter border color */
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  form input:focus, form select:focus {
+    outline: none;
+    border-color: #aaa;
+  }
+  
+  /* Optional Section Styles */
+  .optional-section {
+    margin-top: 40px;
+    border-top: 2px solid #eee;
+    padding-top: 25px;
+  }
+  
+  .optional-section h3 {
+    color: #c44b4f;
+    font-size: 20px; /* Increased font size */
+    margin-bottom: 15px;
+  }
+  
+  /* Button Styles */
+  button {
+    padding: 15px 25px; /* Bigger button size */
+    font-size: 18px; /* Increased button text size */
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px; /* Softer corners */
+    cursor: pointer;
+    margin-top: 25px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+        width: 95%; /* Increase width on smaller screens */
+    }
+  
+    form input, form select {
+        padding: 12px; /* Adjust input padding for smaller screens */
+    }
+  
+    button {
+        width: 100%; /* Make button full-width on smaller screens */
+        font-size: 16px; /* Adjust button text size */
+    }
+  }
+  

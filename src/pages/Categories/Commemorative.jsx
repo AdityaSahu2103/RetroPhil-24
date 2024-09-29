@@ -32,16 +32,16 @@ const Commemorative = () => {
   };
 
   return (
-    <div className="category-page">
-      <h1>Commemorative Stamps</h1>
+    <div className="category-page bg-slate-100 ">
+      <div className='bg-red-400 flex justify-center align-middle py-4 mb-6 text-2xl font-bold text-white'>Commemorative Stamps</div>
       <div className="product-list">
         {products.map(product => (
           <Link to={`/product/${product.id}`} key={product.id} className="product-card">
             <img src={product.image} alt={product.name} className="product-image" />
             <h2 className="product-name">{product.name}</h2>
-            <div className="product-info">
+            <div className="flex bg-zinc-200 w-full justify-evenly p-3 rounded-md">
               <p className="product-price">₹ {product.price}</p>
-              <div className="add-to-cart" onClick={(e) => handleAddToCart(e, product)}>
+              <div className="text-xs font-bold text-white  bg-red-700 py-2 px-3 rounded-md" onClick={(e) => handleAddToCart(e, product)}>
                 <i className="fas fa-shopping-cart"></i> Add to Cart
               </div>
             </div>

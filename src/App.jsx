@@ -29,7 +29,10 @@ import ProfilePage from './components/Profile/ProfilePage.jsx';
 import SellerDashboard from './components/Seller/SellerDashboard.jsx';
 import ProductVerification from './pages/Admin/ProductVerification.jsx';
 import MyProducts from './pages/Seller/MyProducts.jsx';
+import SpecialCovers from './pages/Categories/SpecialCovers.jsx';
 import CertificatePage from './components/Seller/CertificatePage.jsx';
+import CancellationReleases from './pages/Categories/CancellationReleases';
+import Stationary from './pages/Categories/Stationary';
 import VerificationStatus from './components/Seller/VerificationStatus.jsx';
 import AddSellerProduct from './pages/Seller/AddSellerProduct.jsx';
 import CheckCertificate from './components/CheckCertificate/CheckCertificate.jsx';
@@ -37,6 +40,7 @@ import VerifiedProducts from './pages/Seller/VerifiedProducts.jsx';
 import ProductDetailPage from './pages/Seller/ProductDetailPage.jsx';
 import PDAForm from './pages/PDA/PDA.jsx';
 import Recharge from './pages/PDA/Recharge.jsx';
+import Shipping from '../src/components/Shipping/Shipping.jsx';
 
 function App() {
   
@@ -49,6 +53,7 @@ function App() {
         <Routes>
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} /> 
+          <Route path="/shipping" element={<Shipping/>} />
           <Route path="/product/:id" element={<ProductPage />} />
           <Route path="/admin/dashboard" element={
             
@@ -77,7 +82,10 @@ function App() {
           <Route path="/categories/definitive" element={<Definitive />} />
           <Route path="/categories/100-year-old" element={<HundredYearOldStamps />}/>
           <Route path="/admin/add-product" element={<AddProduct />} />
-          
+          <Route path="/categories/Stationary" element={<Stationary />} />
+          <Route path="/categories/CancellationReleases" element={<CancellationReleases />} />
+          <Route path="/categories/SpecialCovers" element={<SpecialCovers />} />
+
           
 
           <Route path="/admin/products" element={
