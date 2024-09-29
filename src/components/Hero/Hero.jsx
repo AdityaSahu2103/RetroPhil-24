@@ -26,11 +26,11 @@ const Hero = () => {
           <p className='text-sm md:text-lg text-gray-700 mb-4'>Stay updated with our latest stamp releases and special editions.</p>
           
           <div className='buttons flex space-x-2 md:space-x-4 justify-center mb-20'>
-            <button className='hero-shop-btn'>Shop</button>
-            <button className='hero-more-btn'>Browse</button>
+            <button className='border-2 rounded-lg text-white bg-red-800 hover:bg-red-900 px-4 py-2 md:px-7 md:py-2 font-medium'>Shop</button>
+            <button className='border-2 rounded-lg bg-zinc-200 hover:bg-zinc-400 text-black px-4 py-2 md:px-7 md:py-2 font-medium'>Browse</button>
           </div>
 
-          <img src="backPhoto.png" alt='Stamp' className='w-full mt-4 md:mt-6 rounded' />
+          <img src="Hero1.webp" alt='Stamp' className='w-full mt-4 md:mt-6 rounded' />
         </div>
 
         {/* Card 2 */}
@@ -40,23 +40,23 @@ const Hero = () => {
           <p className='text-sm md:text-lg text-gray-700 mb-4'>Find one-of-a-kind stamps to enhance your collection</p>
           
           <div className='buttons flex space-x-2 md:space-x-4 justify-center mb-20'>
-            <button className='hero-more-btn'>Find</button>
+            <button className='border-2 rounded-lg bg-zinc-200 hover:bg-zinc-400 text-black px-4 py-2 md:px-7 md:py-2 font-medium'>Find</button>
           </div>
 
-          <img src="backPhoto.png" alt='Stamp' className='w-full mt-4 md:mt-6 rounded' />
+          <img src="Hero1.webp" alt='Stamp' className='w-full mt-4 md:mt-6 rounded' />
         </div>
 
         {/* Card 3 */}
-        <div className='p-4 flex flex-col sm:flex-row space-x-0 sm:space-x-4 lg:max-h-72'>
-          <div className='w-full sm:w-1/2 p-4 border-2 rounded-lg'>
+        <div className='px-4 gap-4 flex flex-col sm:flex-row space-x-0 sm:space-x-4 lg:max-h-96'>
+          <div className='w-full py-14 sm:w-1/2 p-4 border-2 rounded-lg'>
             <p className='text-xl md:text-3xl font-semibold'>Your Guide to Collecting</p>
             <p className='text-sm md:text-base'>Essential tips for every stamp enthusiast.</p>
-            <button className='mt-2 text-blue-600'>Learn {'>'}</button>
+            <button className='border-2 rounded-lg hover:bg-zinc-400  bg-zinc-200 text-black px-4 py-2 md:px-7 md:py-2 font-medium'>Learn {' >'}</button>
           </div>
-          <div className='w-full sm:w-1/2 p-4 border-2 rounded-lg mt-4 sm:mt-0'>
+          <div className='w-full py-14 sm:w-1/2 p-4 border-2 rounded-lg'>
             <p className='text-xl md:text-3xl font-semibold'>Join Our Collector Community</p>
             <p className='text-sm md:text-base'>Connect with fellow stamp lovers and share insights.</p>
-            <button className='mt-2 text-blue-600'>Connect {'>'}</button>
+            <button className='border-2 rounded-lg hover:bg-zinc-400  bg-zinc-200 text-black px-4 py-2 md:px-7 md:py-2 font-medium'>Connect {' >'}</button>
           </div>
         </div>
 
@@ -66,8 +66,8 @@ const Hero = () => {
           <p className='text-2xl md:text-4xl font-bold py-3'>Master the Art of Collecting</p>
           <p className='text-sm md:text-base'>Utilize our resources to build a valuable and meaningful stamp collection.</p>
           <div className='buttons flex space-x-4 my-4 justify-center mb-12'>
-            <button className='border-2 rounded-lg text-white bg-red-800 px-4 py-2 md:px-7 md:py-2 font-medium'>Start</button>
-            <button className='text-blue-600'>Join {'>'}</button>
+            <button className='border-2 rounded-lg text-white bg-red-800 hover:bg-red-900 px-4 py-2 md:px-7 md:py-2 font-medium'>Start</button>
+            <button className='border-2 rounded-lg hover:bg-zinc-400  bg-zinc-200 text-black px-4 py-2 md:px-7 md:py-2 font-medium'>Join {' >'}</button>
           </div>
           <div className='relative flex-grow'>
             <img src="royalPost.png" alt='Stamp' className='absolute inset-0 w-full h-full object-cover rounded' />

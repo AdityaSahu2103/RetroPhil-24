@@ -190,14 +190,15 @@ const Header = () => {
         <div className="hidden md:flex gap-4 items-center">
           {/* Cart with Item Count */}
           <div className="flex justify-center my-auto relative">
-            <Link to="/cart">
-              <img className='h-10' src='./cart.svg' alt="Cart Icon" />
-              {cart.length > 0 && (
-                <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-2">
-                  {cart.reduce((acc, item) => acc + item.quantity, 0)}
-                </span>
-              )}
-            </Link>
+          <Link to="/cart" className="relative inline-block">
+            <img className="h-10" src="./cart.svg" alt="Cart Icon" />
+            {cart.length > 0 && (
+              <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-2 py-1">
+                {cart.reduce((acc, item) => acc + item.quantity, 0)}
+              </span>
+            )}
+          </Link>
+
           </div>
 
           {/* Profile Icon */}

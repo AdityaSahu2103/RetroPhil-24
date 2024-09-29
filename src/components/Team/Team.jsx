@@ -3,9 +3,9 @@ import { FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const teamMembers = [
   {
-    name: 'John Doe',
-    position: 'Stamp Collector',
-    image: 'DefinitiveStamp.png',
+    name: 'Aditya Sahu',
+    position: 'Team Leader',
+    image: 'Aditya.jpg',
     socials: {
       twitter: 'https://twitter.com/johndoe',
       linkedin: 'https://linkedin.com/in/johndoe',
@@ -13,9 +13,9 @@ const teamMembers = [
     }
   },
   {
-    name: 'Jane Smith',
-    position: 'Stamp Expert',
-    image: 'DefinitiveStamp.png',
+    name: 'Dhananjay Chitale',
+    position: 'Backend Developer',
+    image: 'Dhananjay.jpg',
     socials: {
       twitter: 'https://twitter.com/janesmith',
       linkedin: 'https://linkedin.com/in/janesmith',
@@ -23,9 +23,9 @@ const teamMembers = [
     }
   },
   {
-    name: 'Alice Johnson',
-    position: 'Stamp Enthusiast',
-    image: 'DefinitiveStamp.png',
+    name: 'Raj Barshikar',
+    position: 'Backend Developer',
+    image: 'Raj.jpg',
     socials: {
       twitter: 'https://twitter.com/alicejohnson',
       linkedin: 'https://linkedin.com/in/alicejohnson',
@@ -33,9 +33,9 @@ const teamMembers = [
     }
   },
   {
-    name: 'Bob Brown',
-    position: 'Stamp Curator',
-    image: 'DefinitiveStamp.png',
+    name: 'Suraj Gunjal',
+    position: 'Frontend Developer',
+    image: 'Suraj.jpg',
     socials: {
       twitter: 'https://twitter.com/bobbrown',
       linkedin: 'https://linkedin.com/in/bobbrown',
@@ -43,9 +43,9 @@ const teamMembers = [
     }
   },
   {
-    name: 'Charlie Davis',
-    position: 'Stamp Historian',
-    image: 'DefinitiveStamp.png',
+    name: 'Chandan Bhirud',
+    position: 'Designer',
+    image: 'Chandan.jpg',
     socials: {
       twitter: 'https://twitter.com/charliedavis',
       linkedin: 'https://linkedin.com/in/charliedavis',
@@ -53,8 +53,8 @@ const teamMembers = [
     }
   },
   {
-    name: 'Emily Wilson',
-    position: 'Stamp Collector',
+    name: 'Vasundhara Dixit',
+    position: 'Frontend Developer',
     image: 'DefinitiveStamp.png',
     socials: {
       twitter: 'https://twitter.com/emilywilson',
@@ -76,7 +76,7 @@ const Team = () => {
         {teamMembers.map((member, index) => (
           <div key={index} className='p-5 border rounded-lg shadow-md'>
             <div className='w-full h-60 mb-4'>
-              <img className='object-cover w-full h-full rounded' src={member.image} alt={member.name} />
+              <img className='object-cover w-2/3 mx-auto h-full rounded' src={member.image} alt={member.name} />
             </div>
             <div className='text-center'>
               <h2 className='text-2xl font-bold'>{member.name}</h2>
