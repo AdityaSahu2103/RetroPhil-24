@@ -227,7 +227,7 @@ const Header = () => {
               <>
                 <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Welcome, {user.firstName || user.email}</li>
                 <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => handleProfileOptionClick('profile')}>View Profile</li>
-                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => handleProfileOptionClick('settings')}>Settings</li>
+                
                 <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
                   <Link to="/pdadashboard">PDA Dashboard</Link>
                 </li>
@@ -236,11 +236,16 @@ const Header = () => {
                 ) : (
                   <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={handleBecomeSellerClick}>Become a Seller</li>
                 )}
+                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => handleProfileOptionClick('check-certificate')}>
+                  Check Verified Certificate
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => handleProfileOptionClick('settings')}>Settings</li>
                 <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={handleSignOut}>Sign Out</li>
               </>
             ) : (
               <>
                 <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => navigate('/login')}>Login</li>
+                
                 <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => navigate('/signup')}>Sign Up</li>
               </>
             )}
