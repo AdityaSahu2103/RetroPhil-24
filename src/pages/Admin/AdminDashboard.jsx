@@ -1,10 +1,10 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css'; // Ensure you have this CSS file
+import 'react-tabs/style/react-tabs.css';
 import ProductDetail from '../../components/admin/ProductDetail';
-import OrderDetail from '../../components/admin/OrderDetail';
 import UserDetail from '../../components/admin/UserDetail';
 import './AdminDashboard.css';
+import { Link } from 'react-router-dom';
 
 const AdminDashboard = () => {
     const user = JSON.parse(localStorage.getItem('users'));
@@ -14,7 +14,7 @@ const AdminDashboard = () => {
     }
 
     return (
-        <div>
+        <div className="admin-dashboard">
             <div className="top mb-5 px-5 mt-5">
                 <div className="bg-pink-50 py-5 border border-pink-100 rounded-lg">
                     <h1 className="text-center text-2xl font-bold text-pink-500">Admin Dashboard</h1>
@@ -32,8 +32,9 @@ const AdminDashboard = () => {
                         </Tab>
                         <Tab className="p-4 md:w-1/3 sm:w-1/2 w-full cursor-pointer">
                             <div className="border bg-pink-50 hover:bg-pink-100 border-pink-100 px-4 py-3 rounded-xl">
-                                <h2 className="title-font font-medium text-3xl text-gray-900">Orders</h2>
-                                <p className="leading-relaxed">Total Orders</p>
+                                <h2 className="title-font font-medium text-3xl text-gray-900">Product Verification</h2>
+                                <p className="leading-relaxed">Verify Products</p>
+                                <Link to="/product-verification" className="verification-button">Go to Verification</Link>
                             </div>
                         </Tab>
                         <Tab className="p-4 md:w-1/3 sm:w-1/2 w-full cursor-pointer">
@@ -46,9 +47,6 @@ const AdminDashboard = () => {
 
                     <TabPanel>
                         <ProductDetail />
-                    </TabPanel>
-                    <TabPanel>
-                        <OrderDetail />
                     </TabPanel>
                     <TabPanel>
                         <UserDetail />

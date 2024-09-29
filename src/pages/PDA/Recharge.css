@@ -1,0 +1,112 @@
+.recharge-container {
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+  
+  .recharge-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .pda-number-input, .account-details, .recharge-details {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .pda-number-input label, .recharge-details label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .pda-number-input .input-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pda-number-input .input-group input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .pda-number-input .input-group button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pda-number-input .input-group button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  .account-details h2, .recharge-details h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .account-details p {
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .account-details p strong {
+    width: 40%;
+    text-align: left;
+  }
+  
+  .account-details p span {
+    width: 60%;
+    text-align: right;
+  }
+  
+  .recharge-details label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .recharge-details input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .recharge-details button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .recharge-details button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+  }
+  

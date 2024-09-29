@@ -1,85 +1,85 @@
 /* src/pages/Admin/AddProduct.css */
 
 .add-product {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    background-color: #f5f5f5;
-  }
-  
-  .add-product-header {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #ff4d4d;
-    font-weight: bold;
-    font-size: 24px;
-    padding: 10px 20px; /* Add padding for the box */
-    border: 2px solid #ff4d4d; /* Add a red border */
-    border-radius: 5px; /* Make the border rounded */
-  }
-  .add-product h1 {
-    font-size: 1.5em; /* Increased font size */
-    color: #fff; /* White text color */
-    background-color: #b71c1c; /* Red background */
-    padding: 10px 20px;
-    border-radius: 10px;
-    display: inline-block;
-    margin-bottom: 20px;
-  }
-  
-  .add-product-form {
-    width: 80%;
-    max-width: 400px;
-    background-color: #fff;
-    border: 1px solid #c69d5a;
-    border-radius: 10px;
-    padding: 20px;
-  }
-  
-  .add-product label {
-    font-weight: 600;
-    color: #333;
-  }
-  
-  .add-product input,
-  .add-product textarea,
-  .add-product select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .add-product input::placeholder,
-  .add-product textarea::placeholder {
-    color: #999;
-  }
-  
-  .add-product input:focus,
-  .add-product textarea:focus,
-  .add-product select:focus {
-    border-color: #ff4d4d;
-    box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
-    outline: none;
-  }
-  
-  .add-product button {
-    padding: 10px 20px;
-    background-color: #b71c1c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .add-product button:hover {
-    background-color: #e60000; /* Darker red on hover */
-    transform: scale(1.05);
-  }
-  .add-product button:active {
-    transform: scale(1); /* Reset scale on click */
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.add-product-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff4d4d;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 10px 20px; /* Add padding for the box */
+  border: 2px solid #ff4d4d; /* Add a red border */
+  border-radius: 5px; /* Make the border rounded */
+}
+.add-product h1 {
+  font-size: 1.5em; /* Increased font size */
+  color: #fff; /* White text color */
+  background-color: #b71c1c; /* Red background */
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.add-product-form {
+  width: 80%;
+  max-width: 400px;
+  background-color: #fff;
+  border: 1px solid #c69d5a;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.add-product label {
+  font-weight: 600;
+  color: #333;
+}
+
+.add-product input,
+.add-product textarea,
+.add-product select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-product input::placeholder,
+.add-product textarea::placeholder {
+  color: #999;
+}
+
+.add-product input:focus,
+.add-product textarea:focus,
+.add-product select:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+  outline: none;
+}
+
+.add-product button {
+  padding: 10px 20px;
+  background-color: #b71c1c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-product button:hover {
+  background-color: #e60000; /* Darker red on hover */
+  transform: scale(1.05);
+}
+.add-product button:active {
+  transform: scale(1); /* Reset scale on click */
+}

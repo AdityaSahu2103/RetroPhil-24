@@ -25,6 +25,18 @@ import { CartProvider } from './CartContext.jsx';
 import LatestArrivals from './pages/LatestArrivals/LatestArrivals.jsx';
 import PersistentLogin from './PersistentLogin.jsx';
 import Team from './components/Team/Team.jsx';
+import ProfilePage from './components/Profile/ProfilePage.jsx';
+import SellerDashboard from './components/Seller/SellerDashboard.jsx';
+import ProductVerification from './pages/Admin/ProductVerification.jsx';
+import MyProducts from './pages/Seller/MyProducts.jsx';
+import CertificatePage from './components/Seller/CertificatePage.jsx';
+import VerificationStatus from './components/Seller/VerificationStatus.jsx';
+import AddSellerProduct from './pages/Seller/AddSellerProduct.jsx';
+import CheckCertificate from './components/CheckCertificate/CheckCertificate.jsx';
+import VerifiedProducts from './pages/Seller/VerifiedProducts.jsx';
+import ProductDetailPage from './pages/Seller/ProductDetailPage.jsx';
+import PDAForm from './pages/PDA/PDA.jsx';
+import Recharge from './pages/PDA/Recharge.jsx';
 
 function App() {
   
@@ -46,12 +58,28 @@ function App() {
              <ProtectedRouteForAdmin>
               <ProductList />
              </ProtectedRouteForAdmin>} /> {/* Add ProductList route */}
+             <Route path="/profile" element={<ProfilePage/>}/>
+             <Route path="/seller-dashboard" element={<SellerDashboard/>}/>
           <Route path="/categories/explore-more" element={<ExploreMore />}/>
+          <Route path="/seller-dashboard" element={<SellerDashboard/>} />
+          <Route path="/add-seller-product" element={<AddSellerProduct/>} />
+          <Route path="/certificate/:certificateNumber" element={<CertificatePage />} />
+          <Route path="/verification-status" element={<VerificationStatus/>}/>
+          <Route path="/check-certificate" element={<CheckCertificate/>}/>
+          <Route path="/my-products" element={<MyProducts/>} />
+          <Route path="/product-verification" element={<ProductVerification/>}/>
+          <Route path="/verified-products" element={<VerifiedProducts/>} />
+          <Route path="/seller-products/:id" element={<ProductDetailPage/>} />
           <Route path="/latest-arrivals" element={<LatestArrivals/>}/>
+          <Route path="/PDA" element={<PDAForm/>}/>
+          <Route path="recharge" element={<Recharge/>}/>
           <Route path="/categories/commemorative" element={<Commemorative />} />
           <Route path="/categories/definitive" element={<Definitive />} />
           <Route path="/categories/100-year-old" element={<HundredYearOldStamps />}/>
           <Route path="/admin/add-product" element={<AddProduct />} />
+          
+          
+
           <Route path="/admin/products" element={
             <ProtectedRouteForAdmin>
               <ProductDetail />

@@ -1,0 +1,57 @@
+.my-products {
+  background-color: #f9f9f9; /* Soft background */
+  color: #333; /* Dark text for better readability */
+  padding: 20px;
+}
+
+.my-products h1 {
+  color: red;
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Space below heading */
+}
+
+.products-grid {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-between; /* Space items evenly */
+}
+
+.product-card {
+  background-color: white; /* White background for product cards */
+  border: 1px solid #ddd; /* Light border for separation */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding for card content */
+  margin: 10px; /* Margin around each card */
+  width: calc(30% - 20px); /* Responsive width for cards */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center align text */
+  transition: transform 0.2s ease; /* Smooth transform on hover */
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.product-card img {
+  max-width: 100%; /* Ensure images fit within cards */
+  height: 150px; /* Set a fixed height for images */
+  object-fit: cover; /* Cover the space without distortion */
+  border-radius: 4px; /* Rounded corners for images */
+  margin-bottom: 10px; /* Space below image */
+}
+
+.product-card h2 {
+  color: #333; /* Darker color for product name */
+  font-size: 1.5rem; /* Increase font size for product name */
+}
+
+.product-card h3 {
+  color: red; /* Keep status color consistent */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-card {
+      width: calc(100% - 20px); /* Full width for smaller screens */
+  }
+}

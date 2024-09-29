@@ -1,0 +1,184 @@
+/* Main Container */
+.check-certificate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  /* Header Section */
+  .check-certificate-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .check-certificate-header h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .check-certificate-header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Section */
+  .check-certificate-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .check-certificate-form label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .check-certificate-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  .check-certificate-form input:focus {
+    border-color: #4caf50;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  /* Button Styling */
+  .check-certificate-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .check-certificate-form button:hover {
+    background-color: #43a047;
+  }
+  
+  .check-certificate-form button:active {
+    background-color: #388e3c;
+  }
+  
+  /* Error/Success Message Styling */
+  .error-message {
+    margin-top: 20px;
+    color: #d32f2f;
+    background-color: #ffebee;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #d32f2f;
+    text-align: center;
+  }
+  
+  .success-message {
+    margin-top: 20px;
+    color: #2e7d32;
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #2e7d32;
+    text-align: center;
+  }
+  
+  .loading-message {
+    margin-top: 20px;
+    color: #0277bd;
+    background-color: #e1f5fe;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #0277bd;
+    text-align: center;
+  }
+  
+  /* Form Input Section Title */
+  .check-certificate-form h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: normal;
+  }
+  
+  /* Certificate Container */
+  .certificate-container {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('watermark.png'); /* Add your watermark */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+  
+  /* Hide the download button when printing the certificate */
+  @media print {
+    .download-btn {
+      display: none;
+    }
+  }
+  
+  .certificate-stamp-image {
+    position: center;
+    max-width: 250px;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  .download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .download-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .check-certificate-form {
+      padding: 20px;
+    }
+  
+    .check-certificate-header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .check-certificate-form h2 {
+      font-size: 1.3rem;
+    }
+  }
+  

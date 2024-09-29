@@ -1,0 +1,51 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.timeline-item {
+  border-left: 2px solid #ddd;
+  margin: 10px 0;
+  padding-left: 10px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 10px;
+  width: 14px;
+  height: 14px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+
+.timeline-date {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.timeline-status {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.timeline-status.completed {
+  color: green;
+}
+
+.timeline-status.pending {
+  color: orange;
+}
+
+.timeline-status.failed {
+  color: red;
+}
+
+.timeline-location,
+.timeline-description {
+  font-size: 0.9em;
+  color: #555;
+}

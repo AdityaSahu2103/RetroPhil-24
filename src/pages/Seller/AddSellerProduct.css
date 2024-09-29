@@ -1,0 +1,54 @@
+.add-product {
+    background-color: white;
+    color: red;
+    padding: 20px;
+  }
+  
+  .add-product h1 {
+    color: red;
+  }
+  
+  .add-product form div {
+    margin-bottom: 15px;
+  }
+  
+  .add-product form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .add-product form input,
+  .add-product form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid red;
+    border-radius: 4px;
+  }
+  
+  .add-product form button {
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-product form button:hover {
+    background-color: darkred;
+  }
+  .add-product .back-to-dashboard {
+    background-color: red; /* Match with the form buttons */
+    color: white;
+    padding: 8px 12px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem; /* Ensure a readable font size */
+    margin-bottom: 20px; /* Space below the button */
+    display: inline-block; /* Allows margin to be applied */
+}
+
+.back-to-dashboard:hover {
+    background-color: darkred; /* Change on hover for better UX */
+}

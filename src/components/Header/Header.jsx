@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth } from '../../pages/firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { CartContext } from "../../CartContext";
+import {getFirestore, doc, getDoc, updateDoc} from "firebase/firestore";
+import BecomeSellerForm from "../BecomeSeller/BecomeSellerForm";
 import "./Header.css";
 
 const Header = () => {
@@ -10,12 +12,30 @@ const Header = () => {
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [user, setUser] = useState(null);
+  const [isSeller, setIsSeller] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
+  const [showSellerForm, setShowSellerForm] = useState(false);
   const { cart } = useContext(CartContext);
   const navigate = useNavigate();
   const [prevCartLength, setPrevCartLength] = useState(0);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const dropdownRef = useRef(null);
+ 
+  const db=getFirestore();
+  
+  useEffect(() => {
+    const checkSellerStatus = async () => {
+      if (user) {
+        const userRef = doc(db, "Users", user.uid);
+        const userSnap = await getDoc(userRef);
+        if (userSnap.exists()) {
+          setIsSeller(userSnap.data().isSeller || false);
+        }
+      }
+    };
+
+    checkSellerStatus();
+  }, [user]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -25,8 +45,15 @@ const Header = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
-  const handleProfileOptionClick = () => {
+  const handleProfileOptionClick = (option) => {
     setIsProfileDropdownOpen(false);
+    if (option === 'profile') {
+      navigate('/profile');
+    } else if (option === 'settings') {
+      navigate('/settings');
+    } else if (option === 'check-certificate') {
+      navigate('/check-certificate'); // This will redirect users to the page where they enter the certificate number
+    }
   };
 
   const handleClickOutside = (event) => {
@@ -76,6 +103,27 @@ const Header = () => {
     }).catch((error) => {
       console.error('Error signing out: ', error);
     });
+  };
+  const handleBecomeSellerClick = () => {
+    setShowSellerForm(true);
+  };
+
+  const handleSellerFormSubmit = async (formData) => {
+    const userRef = doc(db, "Users", user.uid);
+    try {
+      // Update the Firestore user document to mark as a seller
+      await updateDoc(userRef, {
+        isSeller: true,
+        businessName: formData.businessName,
+        businessAddress: formData.businessAddress,
+      });
+
+      setIsSeller(true); // Update seller state
+      setShowSellerForm(false); // Close the seller form modal
+      alert("You are now a seller!");
+    } catch (error) {
+      console.error("Error becoming seller: ", error);
+    }
   };
 
   const dropdownMenus = {
@@ -179,9 +227,26 @@ const Header = () => {
           <ul className="py-2">
             {user ? (
               <>
-                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Welcome, {user.displayName || user.email}</li>
-                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={handleProfileOptionClick}>View Profile</li>
-                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={handleProfileOptionClick}>Settings</li>
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Welcome, {user.firstName || user.email}</li>
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() =>handleProfileOptionClick('profile')}>View Profile</li>
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={()=>handleProfileOptionClick('settings')}>Settings</li>
+                 {/* Show Seller Dashboard if the user is a seller */}
+              {isSeller ? (
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                  <Link to="/seller-dashboard">Seller Dashboard</Link>
+                </li>
+              ) : (
+                <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={handleBecomeSellerClick}>
+                  Become a Seller
+                </li>
+              )}
+                {/* Seller form modal */}
+        {showSellerForm && (
+          <BecomeSellerForm onSubmit={handleSellerFormSubmit} />
+        )}
+          <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => handleProfileOptionClick('check-certificate')}>
+                  Check Verified Certificate
+                </li>
                 <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={handleSignOut}>Logout</li>
               </>
             ) : (

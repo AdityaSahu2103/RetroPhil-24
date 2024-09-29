@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height for centering */
+    display: flex;
+    flex-direction: column; /* To maintain the flow of header, container, and footer */
+  }
+  
+  /* Container */
+  .profile-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto; /* Ensure container is centered vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically */
+  }
+  
+  /* Header */
+  header {
+    background-color: #d32f2f; /* New Teal Color */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .profile-header {
+    color: #d32f2f;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styles */
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .profile-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Button Styles */
+  .profile-form button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #d32f2f; /* Updated Button Color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px; /* Ensure buttons have space between them */
+  }
+  
+  .profile-form button.edit-button {
+    background-color: #d32f2f; /* Different color for edit button (Amber) */
+  }
+  
+  .profile-form button.save-button {
+    background-color: #00796B; /* Teal for save button */
+  }
+  
+  .profile-form button:hover:not(:disabled) {
+    background-color: #004D40; /* Darker teal on hover */
+  }
+  
+  .profile-form button.edit-button:hover:not(:disabled) {
+    background-color: #004D40; /* Darker amber on hover for edit */
+  }
+  
+  /* Profile Picture */
+  .profile-picture {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #d32f2f; /* Teal border */
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #00796B; /* Teal footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto; /* Keep footer at the bottom */
+  }
+  .notification {
+    background-color:#f44336 ; /* Green for success */
+    color: white;
+    padding: 10px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .notification.error {
+    background-color: #4caf50; /* Red for error */
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .profile-container {
+      padding: 10px;
+    }
+  
+    .profile-form input {
+      font-size: 14px;
+    }
+  
+    .profile-form button {
+      font-size: 14px;
+    }
+  }
+  

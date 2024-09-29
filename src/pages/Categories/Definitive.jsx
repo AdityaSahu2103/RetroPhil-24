@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { db } from '../firebase';
 import { collection, getDocs, query, where } from 'firebase/firestore';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../CartContext';
 import './Category.css';
 
 const Definitive = () => {
   const [products, setProducts] = useState([]);
-  const navigate = useNavigate();
+  
+  const {addToCart}= useContext(CartContext);
+  const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -19,10 +22,13 @@ const Definitive = () => {
     fetchProducts();
   }, []);
 
-  const handleAddToCart = (e, productId) => {
+  const handleAddToCart = (e, product) => {
     e.preventDefault();
-    // Add the product to the cart (you can implement this logic as needed)
-    navigate('/cart');
+    addToCart(product, () => {
+      // Trigger notification
+      setShowNotification(true);
+      setTimeout(() => setShowNotification(false), 4000); // Hide notification after 3 seconds
+    });
   };
 
   return (
@@ -35,13 +41,18 @@ const Definitive = () => {
             <h2 className="product-name">{product.name}</h2>
             <div className="product-info">
               <p className="product-price">₹ {product.price}</p>
-              <div className="add-to-cart" onClick={(e) => handleAddToCart(e, product.id)}>
+              <div className="add-to-cart" onClick={(e) => handleAddToCart(e, product)}>
                 <i className="fas fa-shopping-cart"></i> Add to Cart
               </div>
             </div>
           </Link>
         ))}
       </div>
+      {showNotification && (
+        <div className="notification">
+          Product added to cart successfully! <Link to="/cart" className="view-cart-link">View Cart</Link>
+        </div>
+      )}
     </div>
   );
 };

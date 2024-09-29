@@ -1,0 +1,35 @@
+/* Example CSS for BackToDashboardButton */
+.back-to-dashboard {
+    position: absolute; /* Keeps it fixed on the screen */
+    top: 110px; /* Adjust this value as necessary */
+    right: 20px; /* Adjust this value as necessary */
+    z-index: 1000; /* Ensures it's on top of other content */
+    padding: 0.5rem 1rem; /* Use rem for responsive padding */
+    font-size: 0.8rem; /* Base font size */
+    background-color: red; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .back-to-dashboard {
+      padding: 0.4rem 0.8rem; /* Smaller padding for smaller screens */
+      font-size: 0.7rem; /* Slightly smaller font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .back-to-dashboard {
+      padding: 0.3rem 0.6rem; /* Even smaller padding for mobile screens */
+      font-size: 0.6rem; /* Adjust font size for better fit */
+    }
+  }
+  
+  .back-to-dashboard:hover {
+    background-color: darkred; /* Darker shade on hover */
+  }
+  

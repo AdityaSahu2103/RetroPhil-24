@@ -1,0 +1,59 @@
+.verified-products-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .product-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-details {
+    margin-top: 10px;
+  }
+  
+  .add-to-cart-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* Add this to your VerifiedProducts.css */
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50; /* Green color for success notification */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  /* Add this to your VerifiedProducts.css */
+
+.view-cart-link {
+    color: #ffffff;
+    text-decoration: underline;
+    margin-left: 10px;
+  }
+  
