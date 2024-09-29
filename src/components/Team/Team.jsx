@@ -55,7 +55,7 @@ const teamMembers = [
   {
     name: 'Vasundhara Dixit',
     position: 'Frontend Developer',
-    image: 'DefinitiveStamp.png',
+    image: 'vasundhara.png',
     socials: {
       twitter: 'https://twitter.com/emilywilson',
       linkedin: 'https://linkedin.com/in/emilywilson',
