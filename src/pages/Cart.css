@@ -5,9 +5,14 @@
     color: #333;
     font-family: 'Helvetica Neue', sans-serif;
     max-width: 1200px;
+    height: 600px;
     margin: 0 auto;
   }
   
+  .cart-page h2{
+font-size: large;
+  }
+
   .cart-items {
     display: flex;
     flex-direction: column;
