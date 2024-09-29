@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns'; // Install date-fns if needed
-import './Timeline.css';
+import './TimeLine.css';
 
 const Timeline = ({ events }) => {
   return (
