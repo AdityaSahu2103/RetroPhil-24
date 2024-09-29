@@ -40,10 +40,10 @@ const LatestArrivals = () => {
         {products.map(product => (
           <div key={product.id} className="product-card">
             <img src={product.image} alt={product.name} className="product-image" />
-            <h3>{product.name}</h3>
-            <p>Price: ₹{product.price}</p>
-            <p>Category: {product.category}</p>
-            <p>Added on: {new Date(product.createdAt.seconds * 1000).toLocaleDateString()}</p>
+            <h3 className='text-zinc-800'>{product.name}</h3>
+            <p className='font-bold text-lg '>Price: ₹{product.price}</p>
+            <p className='font-semibold'>Category: {product.category}</p>
+            <p className='text-green-700 !important'>Added on: {new Date(product.createdAt.seconds * 1000).toLocaleDateString()}</p>
           </div>
         ))}
       </div>

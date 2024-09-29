@@ -174,7 +174,7 @@ const Header = () => {
 
           <Link to="/latest-arrivals" className="text-black">New Arrivals</Link>
           <Link to="/verified-products" className="text-black">Verified Products</Link>
-          <Link to="/more-options" className="text-black">More Options</Link>
+          <Link to="https://philately-community.vercel.app/"  target="_main" className="text-black">Community</Link>
           
           {/* Search Bar */}
           <input
@@ -272,8 +272,8 @@ const Header = () => {
         <div className="flex flex-col gap-3 mt-3 items-center">
           <Link to="/categories" className="text-black">Stamp Collections</Link>
           <Link to="/new-arrivals" className="text-black">New Arrivals</Link>
-          <Link to="/best-sellers" className="text-black">Best Sellers</Link>
-          <Link to="/more-options" className="text-black">More Options</Link>
+          <Link to="/verified-products" className="text-black">Verified Products</Link>
+          <Link to="https://philately-community.vercel.app/" target="_main" className="text-black">Community</Link>
           <div className="flex justify-center my-auto">
             <img className='h-10' src='./cart.svg' alt="Cart Icon" />
             <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-2">
