@@ -29,7 +29,7 @@ const Cart = () => {
               </div>
             </div>
           ))}
-          <div className="cart-total">
+          <div className="cart-total mb-4 mt-4 lg:mx-80 pt-3 rounded-lg bg-black">
             <h3>Total: ₹ {total}</h3>
           </div>
         </div>

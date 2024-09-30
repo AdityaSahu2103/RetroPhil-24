@@ -57,7 +57,7 @@ const ProductPage = () => {
             <h3 className="text-xl font-semibold mb-4">{product.category}</h3>
             <p className="text-gray-600 mb-6">{product.description}</p>
             <p className="text-2xl font-bold mb-6">₹{product.price}</p>
-            <p className="text-sm text-gray-500 mb-6">Shipping to the UK: Free</p>
+            <p className="text-sm text-gray-500 mb-6">Shipping to the India: Free</p>
           </div>
 
           {/* Buttons */}

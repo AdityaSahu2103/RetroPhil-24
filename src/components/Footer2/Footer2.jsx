@@ -4,8 +4,8 @@ import "./Footer2.css";
 
 const Footer = () => {
   return (
-    <footer className='bg-black text-white w-full overflow-hidden'>
-      <div className='py-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full'>
+    <footer className='bg-black text-white '>
+      <div className='px-4 py-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full'>
         <div className='flex justify-center items-center'>
           <a href='#' className='w-auto'>
             <img className='p-4 h-32 filter invert' src="logo.png" alt="Logo" />

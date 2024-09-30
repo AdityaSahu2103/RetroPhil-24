@@ -32,7 +32,7 @@ const HundredYearOldStamps = () => {
         {products.map(product => (
           <Link to={`/product/${product.id}`} key={product.id} className="product-card">
             <img src={product.image} alt={product.name} className="product-image" />
-            <h2 className="product-name">{product.name}</h2>
+            <div className=" text-black my-4">{product.name}</div>
             <div className="product-info">
               <p className="product-price">₹ {product.price}</p>
               <div className="add-to-cart" onClick={(e) => handleAddToCart(e, product.id)}>

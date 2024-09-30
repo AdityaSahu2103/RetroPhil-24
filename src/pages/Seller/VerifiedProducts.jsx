@@ -31,7 +31,7 @@ const VerifiedProducts = () => {
 
   return (
     <div className="verified-products-container">
-      <h1>Verified Products</h1>
+      <div className='bg-red-400 text-xl font-bold text-green-900 py-3 rounded-lg lg:mx-80 md:mx-80'>Verified Products</div>
       <div className="product-list">
         {products.length === 0 ? (
           <p>No verified products available.</p>
@@ -40,10 +40,10 @@ const VerifiedProducts = () => {
             <div className="product-card" key={product.id}>
               <img src={product.image} alt={product.name} className="product-image" />
               <div className="product-details">
-                <h2 className="product-name">{product.name}</h2>
-                <p className="product-price">₹ {product.price}</p>
-                <Link to={`/seller-products/${product.id}`} className="view-details-button">View Details</Link>
-                <button className="add-to-cart-button" onClick={() => handleAddToCart(product)}>Add to Cart</button>
+                <div className="my-6">{product.name}</div>
+                <p className="product-price text-xl">₹ {product.price}</p>
+                <Link to={`/seller-products/${product.id}`} className="view-details-button bg-zinc-200 mr-3 p-3 rounded-lg text-lg text-black font-bold">View Details</Link>
+                <button className="add-to-cart-button font-bold text-lg" onClick={() => handleAddToCart(product)}>Add to Cart</button>
               </div>
             </div>
           ))

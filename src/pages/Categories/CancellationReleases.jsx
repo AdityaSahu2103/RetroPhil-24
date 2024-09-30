@@ -32,7 +32,7 @@ const CancellationReleases = () => {
         {products.map(product => (
           <Link to={`/product/${product.id}`} key={product.id} className="product-card">
             <img src={product.image} alt={product.name} className="product-image" />
-            <h2 className="product-name">{product.name}</h2>
+            <div className=" text-black my-4">{product.name}</div>
             <div className="flex bg-zinc-200 w-full justify-evenly p-3 rounded-md">
               <p className="product-price">₹ {product.price}</p>
               <div className="text-xs font-bold text-white  bg-red-700 py-2 px-3 rounded-md" onClick={(e) => handleAddToCart(e, product.id)}>
