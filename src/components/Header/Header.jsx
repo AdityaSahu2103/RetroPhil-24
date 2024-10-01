@@ -110,14 +110,28 @@ const Header = () => {
   };
 
   const handleSellerFormSubmit = async (formData) => {
-    const userRef = doc(db, "Users", user.uid);
+    const userRef = doc(db, "Users", user.uid); // Reference to the user's document
     try {
-      await updateDoc(userRef, {
-        isSeller: true,
-        businessName: formData.businessName,
-        businessAddress: formData.businessAddress,
-      });
-
+      // Check if the user document exists
+      const userDoc = await getDoc(userRef);
+  
+      if (userDoc.exists()) {
+        // If the document exists, update it
+        await updateDoc(userRef, {
+          isSeller: true,
+          businessName: formData.businessName,
+          businessAddress: formData.businessAddress,
+        });
+      } else {
+        // If it doesn't exist, create a new document with the seller info
+        await setDoc(userRef, {
+          isSeller: true,
+          businessName: formData.businessName,
+          businessAddress: formData.businessAddress,
+          createdAt: new Date(), // Optional: Add a created date
+        });
+      }
+  
       setIsSeller(true);
       setShowSellerForm(false);
       alert("You are now a seller!");
@@ -125,6 +139,7 @@ const Header = () => {
       console.error("Error becoming seller: ", error);
     }
   };
+
 
   const closeSellerForm = () => {
     setShowSellerForm(false);
@@ -232,8 +247,10 @@ const Header = () => {
                   <Link to="/pdadashboard">PDA Dashboard</Link>
                 </li>
                 {isSeller ? (
-                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer ">You are a seller</li>
-                ) : (
+                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                  <Link to="/seller-dashboard">Go to Seller Dashboard</Link> {/* Change made here */}
+                </li>
+               ): (
                   <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={handleBecomeSellerClick}>Become a Seller</li>
                 )}
                   <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={() => handleProfileOptionClick('check-certificate')}>

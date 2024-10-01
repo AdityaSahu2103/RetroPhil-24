@@ -33,7 +33,7 @@ const AddSellerProduct = () => {
           status: 'Pending Verification',
           createdAt: serverTimestamp(),
           timeline: [
-            { status: 'Form Submitted', timestamp: serverTimestamp() }
+            { status: 'Form Submitted', timestamp: new Date() }
           ]
         };
 

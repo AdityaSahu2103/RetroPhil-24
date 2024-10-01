@@ -59,7 +59,6 @@ const CertificatePage = () => {
 
   return (
     <div className="certificate-container" ref={certificateRef}>
-      <div className='certificate-content'>
       <div className="certificate-header">
         <h1>Indian Philatelic Society</h1>
         <h2>Verified Certificate of Authenticity</h2>
@@ -80,7 +79,6 @@ const CertificatePage = () => {
         <p><strong>Verified by:</strong> {certificate.verifierSignature}</p>
       </div>
       <button className="download-btn" onClick={downloadCertificate}>Download Certificate</button>
-    </div>
     </div>
   );
 };

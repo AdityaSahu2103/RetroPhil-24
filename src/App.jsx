@@ -41,6 +41,7 @@ import ProductDetailPage from './pages/Seller/ProductDetailPage.jsx';
 import PDAForm from './pages/PDA/PDA.jsx';
 import Recharge from './pages/PDA/Recharge.jsx';
 import Shipping from '../src/components/Shipping/Shipping.jsx';
+import PDAdashboard from './components/PDA/PDAdashboard.jsx';
 
 function App() {
   
@@ -77,6 +78,7 @@ function App() {
           <Route path="/seller-products/:id" element={<ProductDetailPage/>} />
           <Route path="/latest-arrivals" element={<LatestArrivals/>}/>
           <Route path="/PDA" element={<PDAForm/>}/>
+          <Route path="/pdadashboard" element={<PDAdashboard/>}/>
           <Route path="recharge" element={<Recharge/>}/>
           <Route path="/categories/commemorative" element={<Commemorative />} />
           <Route path="/categories/definitive" element={<Definitive />} />

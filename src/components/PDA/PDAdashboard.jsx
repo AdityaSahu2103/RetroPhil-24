@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook for navigation
-import { db, auth } from '../firebase';
+import { db, auth } from '../../pages/firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import './PDAdashboard.css';
 
