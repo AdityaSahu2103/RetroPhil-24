@@ -14,7 +14,7 @@
   border-radius: 10px;
   padding: 10px;
   background-color: #fff;
-  width: calc(25% - 20px); /* Smaller width */
+  width: 240px; /* Smaller width */
   box-sizing: border-box;
   text-align: center;
   position: relative;

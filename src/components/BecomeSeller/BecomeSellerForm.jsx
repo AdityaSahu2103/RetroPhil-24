@@ -13,7 +13,7 @@ const BecomeSellerForm = ({ onSubmit, onClose }) => {
     <div className="modal fixed inset-0 flex items-center justify-center z-50">
       <div className="modal-content bg-white p-10 rounded-lg shadow-lg w-full max-w-md">
         <div className="flex justify-between items-center mb-6">
-          <div className='text-2xl font-extrabold text-red-600 mx-auto'>Become a Seller</div>
+          <div className='text-2xl font-extrabold text-red-600 mx-auto '>Become a Seller</div>
           <button className="close-button text-gray-900 font-extrabold hover:bg-red-700 bg-red-400" onClick={onClose}>X</button>
         </div>
         <form onSubmit={handleSubmit}>

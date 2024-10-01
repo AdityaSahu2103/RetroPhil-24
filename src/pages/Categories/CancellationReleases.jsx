@@ -27,7 +27,7 @@ const CancellationReleases = () => {
 
   return (
     <div className="category-page bg-slate-100 ">
-      <div className='bg-red-400 flex justify-center align-middle py-4 mb-6 text-2xl font-bold text-white'>CancellationReleases Items</div>
+      <div className='bg-red-400 flex justify-center align-middle py-4 mb-6 text-2xl font-bold text-white'>Cancellation Releases Items</div>
       <div className="product-list">
         {products.map(product => (
           <Link to={`/product/${product.id}`} key={product.id} className="product-card">

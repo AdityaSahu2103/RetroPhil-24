@@ -161,7 +161,7 @@ const Header = () => {
       <div className="flex justify-between items-center">
         <div className="image-box">
           <Link to="/">
-            <img className="fit-image" src="logo.png" alt="Logo" />
+            <img className="fit-image" src="./logo.png" alt="Logo" />
           </Link>
         </div>
 
@@ -232,7 +232,7 @@ const Header = () => {
                   <Link to="/pdadashboard">PDA Dashboard</Link>
                 </li>
                 {isSeller ? (
-                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">You are a seller</li>
+                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer ">You are a seller</li>
                 ) : (
                   <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer" onClick={handleBecomeSellerClick}>Become a Seller</li>
                 )}
@@ -267,11 +267,33 @@ const Header = () => {
       {isMenuOpen && (
         <nav className="mobile-nav">
           <ul>
+            <div className="flex justify-center my-auto mb-3">
+            <img
+              className='h-10 mx-3 cursor-pointer'
+              src='./profile.svg'
+              alt="Profile Icon"
+              onClick={handleProfileClick}
+            />
+          </div>
             <li><Link to="/">Home</Link></li>
+            <li><Link to="/categories/explore-more">Stamp Collections</Link></li>
             <li><Link to="/latest-arrivals">New Arrivals</Link></li>
             <li><Link to="/verified-products">Verified Products</Link></li>
             <li><Link to="https://philately-community.vercel.app/" target="_main">Community</Link></li>
-            <li><Link to="/cart">Cart</Link></li>
+        
+          <div className="flex justify-center my-auto relative mt-2">
+            <Link to="/cart" className="relative inline-block">
+              <img className="h-10" src="./cart.svg" alt="Cart Icon" />
+              {cart.length > 0 && (
+                <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-2 py-1">
+                  {cart.reduce((acc, item) => acc + item.quantity, 0)}
+                </span>
+              )}
+            </Link>
+          </div>
+
+          
+        
           </ul>
         </nav>
       )}
