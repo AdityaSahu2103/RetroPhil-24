@@ -78,7 +78,7 @@ function Login() {
             </button>
           </div>
           <p className="forgot-password text-right">
-            Don't have an account? <a href="../Signup">Sign Up</a>
+            Don't have an account? <a href="../Signup/Signup">Sign Up</a>
           </p>
         </form>
       )}
